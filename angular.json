@@ -103,6 +103,17 @@
             ],
             "scripts": []
           }
+        },
+        "e2e": {
+          "builder": "playwright-ng-schematics:playwright",
+          "options": {
+            "devServerTarget": "angular-19-testing-jest-playwright:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "angular-19-testing-jest-playwright:serve:production"
+            }
+          }
         }
       }
     }
