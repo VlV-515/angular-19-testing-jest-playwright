@@ -1,0 +1,35 @@
+<article>
+  <h2>{{ name() }}</h2>
+
+  <!-- Icono de categoria con @switch -->
+  @switch (category()) {
+    @case ('electronics') { <span data-testid="category-icon">💻</span> }
+    @case ('clothing') { <span data-testid="category-icon">👕</span> }
+    @case ('food') { <span data-testid="category-icon">🍕</span> }
+  }
+
+  <!-- Precios -->
+  <p data-testid="price">{{ price() | currency }}</p>
+  <p data-testid="price-with-tax">Con IVA: {{ priceWithTax() | currency }}</p>
+
+  <!-- Stock label -->
+  <span data-testid="stock-label">{{ stockLabel() }}</span>
+
+  <!-- Boton de favorito -->
+  <button (click)="onToggleFavorite()" data-testid="favorite-btn">
+    {{ isFavorite() ? 'Quitar favorito' : 'Agregar favorito' }}
+  </button>
+
+  <!-- Controles de cantidad y boton de agregar (solo si hay stock) -->
+  @if (isAvailable()) {
+    <div>
+      <button (click)="decrementQuantity()" data-testid="decrement-btn">-</button>
+      <span data-testid="quantity">{{ quantity() }}</span>
+      <button (click)="incrementQuantity()" data-testid="increment-btn">+</button>
+    </div>
+
+    <button (click)="onAddToCart()" data-testid="add-to-cart-btn">
+      Agregar al carrito
+    </button>
+  }
+</article>
