@@ -44,8 +44,8 @@ Contiene:
 
 | Extension | Framework | Ejecutado por |
 |-----------|-----------|---------------|
-| `*.spec.ts` | Jest | `npm run test` |
-| `*.e2e.spec.ts` | Playwright | `npm run e2e` |
+| `*.spec.ts` | Jest | `pnpm test` |
+| `*.e2e.spec.ts` | Playwright | `pnpm e2e` |
 
 Los `*.e2e.spec.ts` estan excluidos de Jest via `testPathIgnorePatterns` en `jest.config.js`.
 Los `*.functional.ts` tambien estan excluidos (para uso futuro).
@@ -122,7 +122,7 @@ Cada archivo `.md` de documentacion debe incluir:
 5. **Seccion del archivo de test:** Estructura del describe/it, conceptos clave usados
 6. **Comando para ejecutar:**
    ```bash
-   npm run test -- --testPathPattern="nombre-del-archivo"
+   pnpm test -- --testPathPattern="nombre-del-archivo"
    ```
 
 Todo en espanol. Seguir el estilo de los `.md` existentes en `src/app/examples/unit-test/`.

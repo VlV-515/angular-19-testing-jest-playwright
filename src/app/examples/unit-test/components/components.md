@@ -182,5 +182,5 @@ Usa `queryBy*` (no `getBy*`) cuando verificas que algo NO existe.
 ## Ejecutar los tests
 
 ```bash
-npm run test -- --testPathPattern="product-card"
+pnpm test -- --testPathPattern="product-card"
 ```

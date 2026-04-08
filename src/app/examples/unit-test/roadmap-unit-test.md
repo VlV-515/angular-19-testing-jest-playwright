@@ -174,20 +174,20 @@ expect(screen.getByText('resultado')).toBeInTheDocument();
 
 ```bash
 # Todos los tests
-npm run test
+pnpm test
 
 # Solo una seccion
-npm run test -- --testPathPattern="truncate.pipe"
-npm run test -- --testPathPattern="password-strength"
-npm run test -- --testPathPattern="product.service"
-npm run test -- --testPathPattern="auth.guard"
-npm run test -- --testPathPattern="product-detail.resolver"
-npm run test -- --testPathPattern="auth-token.interceptor"
-npm run test -- --testPathPattern="highlight.directive"
-npm run test -- --testPathPattern="product-card"
+pnpm test -- --testPathPattern="truncate.pipe"
+pnpm test -- --testPathPattern="password-strength"
+pnpm test -- --testPathPattern="product.service"
+pnpm test -- --testPathPattern="auth.guard"
+pnpm test -- --testPathPattern="product-detail.resolver"
+pnpm test -- --testPathPattern="auth-token.interceptor"
+pnpm test -- --testPathPattern="highlight.directive"
+pnpm test -- --testPathPattern="product-card"
 
 # Con cobertura
-npm run test:coverage
+pnpm test:coverage
 ```
 
 ---

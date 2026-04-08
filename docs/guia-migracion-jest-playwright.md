@@ -17,8 +17,8 @@ end-to-end (e2e) en un proyecto Angular 19.
 ## Prerequisitos
 
 - Un proyecto Angular 19 existente (`ng new mi-proyecto`)
-- Node.js y npm instalados
-- Haber ejecutado `npm install` (que exista `node_modules/`)
+- Node.js y pnpm instalados
+- Haber ejecutado `pnpm install` (que exista `node_modules/`)
 
 ---
 
@@ -37,7 +37,7 @@ porque vamos a reemplazarlos completamente con Jest. Dejarlos instalados puede c
 conflictos de tipos y confusion.
 
 ```bash
-npm uninstall karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter @types/jasmine
+pnpm remove karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter @types/jasmine
 ```
 
 **Que se remueve y por que:**
@@ -81,7 +81,7 @@ Cuando te pregunte:
 o `toHaveTextContent()` en tus archivos de test.
 
 ```bash
-npm i -D @types/testing-library__jest-dom
+pnpm add -D @types/testing-library__jest-dom
 ```
 
 **(Angular 19 -> @types/testing-library__jest-dom@5.14.9)**
@@ -97,7 +97,7 @@ npm i -D @types/testing-library__jest-dom
 - `@jest/globals` provee las funciones globales de Jest (`describe`, `it`, `expect`) con tipos de TypeScript completos
 
 ```bash
-npm i -D jest jest-preset-angular @jest/globals
+pnpm add -D jest jest-preset-angular @jest/globals
 ```
 
 **(Angular 19 -> jest@29.7.0, jest-preset-angular@14.4.2, @jest/globals@30.3.0)**
@@ -265,7 +265,7 @@ module.exports = {
 
 **Por que:** La seccion `"test"` en `angular.json` configura el builder de Karma
 (`@angular-devkit/build-angular:karma`). Ya que ahora usamos Jest directamente desde
-la linea de comandos (`npm run test`), esta seccion no es necesaria y puede causar
+la linea de comandos (`pnpm test`), esta seccion no es necesaria y puede causar
 confusion si alguien ejecuta `ng test` por accidente.
 
 **Archivo:** `angular.json`
@@ -355,11 +355,11 @@ e2e/example.spec.ts  ->  e2e/example.e2e.spec.ts
 Ejecuta los tests para confirmar que la configuracion es correcta:
 
 ```bash
-npm run test
+pnpm test
 ```
 
 ```bash
-npm run test:coverage
+pnpm test:coverage
 ```
 
 **Que esperar:**

@@ -61,13 +61,13 @@ Pasos detallados para reemplazar el setup de testing por defecto de Angular 19 c
 
 ```bash
 # Unit tests
-npm run test
+pnpm test
 
 # Unit tests con reporte de cobertura
-npm run test:coverage
+pnpm test:coverage
 
 # Tests e2e
-npm run e2e
+pnpm e2e
 ```
 
 ---
@@ -108,8 +108,8 @@ npm run e2e
 
 | Extension | Framework | Ejecutado por |
 |-----------|-----------|---------------|
-| `*.spec.ts` | Jest | `npm run test` |
-| `*.e2e.spec.ts` | Playwright | `npm run e2e` |
+| `*.spec.ts` | Jest | `pnpm test` |
+| `*.e2e.spec.ts` | Playwright | `pnpm e2e` |
 
 > Los archivos `*.e2e.spec.ts` estan excluidos de Jest via `testPathIgnorePatterns` en `jest.config.js`.
 

@@ -146,5 +146,5 @@ con los argumentos correctos, sin hacer navegacion real.
 ## Ejecutar los tests
 
 ```bash
-npm run test -- --testPathPattern="product-detail.resolver"
+pnpm test -- --testPathPattern="product-detail.resolver"
 ```

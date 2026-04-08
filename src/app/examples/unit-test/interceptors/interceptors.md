@@ -159,5 +159,5 @@ una excepcion sin manejar. El error se captura y podemos inspeccionarlo.
 ## Ejecutar los tests
 
 ```bash
-npm run test -- --testPathPattern="auth-token.interceptor"
+pnpm test -- --testPathPattern="auth-token.interceptor"
 ```

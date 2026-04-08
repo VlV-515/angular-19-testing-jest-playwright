@@ -150,5 +150,5 @@ Esto hace que sea facil de testear: solo pasas un mock en vez del servicio real.
 ## Ejecutar los tests
 
 ```bash
-npm run test -- --testPathPattern="password-strength"
+pnpm test -- --testPathPattern="password-strength"
 ```

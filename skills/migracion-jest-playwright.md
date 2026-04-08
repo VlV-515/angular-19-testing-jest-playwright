@@ -16,7 +16,7 @@ Antes de ejecutar cualquier paso, verifica:
 
 1. Que exista `angular.json` en la raiz del proyecto (confirma que es un proyecto Angular)
 2. Que exista `package.json`
-3. Que exista `node_modules/` (que ya se haya corrido `npm install`)
+3. Que exista `node_modules/` (que ya se haya corrido `pnpm install`)
 4. Que el proyecto use Angular 19 (verificar en `package.json` -> `@angular/core`)
 
 ---
@@ -31,7 +31,7 @@ Antes de ejecutar cualquier paso, verifica:
      el estandar de facto en la comunidad. -->
 
 ```bash
-npm uninstall karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter @types/jasmine
+pnpm remove karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter @types/jasmine
 ```
 
 **Paquetes que se remueven:**
@@ -80,7 +80,7 @@ ng add @testing-library/angular
      marcara errores en los archivos de test cuando uses estos matchers. -->
 
 ```bash
-npm i -D @types/testing-library__jest-dom
+pnpm add -D @types/testing-library__jest-dom
 ```
 
 **(Angular 19 -> @types/testing-library__jest-dom@5.14.9)**
@@ -97,7 +97,7 @@ npm i -D @types/testing-library__jest-dom
        con soporte completo de TypeScript -->
 
 ```bash
-npm i -D jest jest-preset-angular @jest/globals
+pnpm add -D jest jest-preset-angular @jest/globals
 ```
 
 **(Angular 19 -> jest@29.7.0, jest-preset-angular@14.4.2)**
@@ -263,7 +263,7 @@ module.exports = {
 
 <!-- POR QUE: La seccion "test" en angular.json configura el builder de Karma
      (@angular-devkit/build-angular:karma). Ya que ahora usamos Jest directamente
-     desde la linea de comandos (npm run test), esta seccion ya no es necesaria
+     desde la linea de comandos (pnpm test), esta seccion ya no es necesaria
      y puede causar confusion. -->
 
 **Archivo a modificar:** `angular.json`
@@ -331,11 +331,11 @@ mv e2e/example.spec.ts e2e/example.e2e.spec.ts
 Ejecutar los tests para confirmar que la configuracion es correcta:
 
 ```bash
-npm run test
+pnpm test
 ```
 
 ```bash
-npm run test:coverage
+pnpm test:coverage
 ```
 
 **Resultado esperado:** Los tests deben ejecutarse (aunque pueden fallar si el test

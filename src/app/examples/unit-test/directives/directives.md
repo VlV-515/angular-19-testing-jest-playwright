@@ -144,5 +144,5 @@ Siempre que testees:
 ## Ejecutar los tests
 
 ```bash
-npm run test -- --testPathPattern="highlight.directive"
+pnpm test -- --testPathPattern="highlight.directive"
 ```

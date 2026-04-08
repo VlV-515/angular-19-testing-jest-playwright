@@ -171,5 +171,5 @@ Los signals se leen como funciones: `signal()` retorna su valor actual.
 ## Ejecutar los tests
 
 ```bash
-npm run test -- --testPathPattern="product.service"
+pnpm test -- --testPathPattern="product.service"
 ```

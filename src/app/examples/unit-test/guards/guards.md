@@ -153,5 +153,5 @@ Cada test configura el estado de autenticacion que necesita.
 ## Ejecutar los tests
 
 ```bash
-npm run test -- --testPathPattern="auth.guard"
+pnpm test -- --testPathPattern="auth.guard"
 ```

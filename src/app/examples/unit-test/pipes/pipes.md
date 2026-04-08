@@ -107,5 +107,5 @@ Usa este patron para cualquier pieza de Angular que sea una **funcion pura**:
 ## Ejecutar los tests
 
 ```bash
-npm run test -- --testPathPattern="truncate.pipe"
+pnpm test -- --testPathPattern="truncate.pipe"
 ```
